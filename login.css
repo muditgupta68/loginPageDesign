@@ -1,0 +1,227 @@
+/* basic functionality */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*,::before,::after{
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--body-font);
+    box-sizing: border-box;
+    color: var(--primary);
+}
+:root{
+    --primary : #232323;
+    --secondary : #8590aD;
+    --signHover : rgb(211, 33, 33);
+    --body-font : 'Roboto', sans-serif;
+    --big-font-size: 2rem; 
+    --medium-font-size: 0.9rem; 
+    --small-font-size: 0.7rem; 
+}
+
+@media screen and (min-width:768px) {
+    :root{
+        --big-font-size: 2.5rem; 
+        --medium-font-size: 1rem; 
+    }
+}
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* form-shapes */
+
+.shape_form{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.shape1,.shape2{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.shape1{
+    background: linear-gradient(180deg, var(--primary),rgba(196,196,196,0));
+    top: -7rem;
+    left: -3rem;
+}
+
+.shape2{
+    background: linear-gradient(180deg, var(--primary),rgba(196,196,196,0));
+    bottom: -6rem;
+    right: -5rem;
+    rotate: 180deg;
+}
+
+/* form-styling */
+
+.form{
+    height:100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.formContent{
+    width: 300px;
+}
+
+.formImage{
+    display: none;
+}
+
+.formTitle{
+    font-size: var(--big-font-size);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.divForm{
+    border-bottom: 1px solid var(--secondary);
+    margin-bottom:1rem;
+    position: relative;
+}
+
+.formLabel{
+    font-size: var(--medium-font-size);
+    color: var(--secondary);
+}
+
+.form_input{
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--primary);
+    font-size: var(--medium-font-size);
+    margin-left: 0.5rem;
+    position: absolute;
+    top:4px;
+    left:16px;
+}
+
+.form__forgot{
+    display: block;
+    text-align:right;
+    font-size: var(--medium-font-size);
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.form__forgot:hover{
+    color: var(--primary);
+    
+}
+
+.submitButton{
+    width: 100%;
+    outline: none;
+    border:none;
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: var(--primary);
+    color:antiquewhite;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.4s ease 0s;
+
+}
+.submitButton:hover{
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.75); */
+    background-color: #fff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    font-weight: 500;
+
+}
+.social{
+    text-align: center;
+}
+
+span{
+    font-size: var(--medium-font-size);
+    display: block;
+    margin-bottom: 15px;
+    color: var(--secondary);
+
+}
+
+.icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+/* signature  */
+
+
+footer {
+    position: absolute;
+    bottom: 1.3rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  footer .attribution {
+    font-size: 14px;
+    word-spacing: 5px;
+    color: var(--primary);
+    text-transform: uppercase;
+  }
+  
+  footer .attribution a {
+    text-decoration: none;
+    font-weight: bolder;
+    transition: all .5s ease;
+  }
+  footer .attribution a:visited {
+    color: var(--primary);
+  }
+  
+  footer .attribution a:hover {
+    color: var(--signHover);
+  }
+
+/* Media Queries */
+
+@media screen and (min-width: 968px) {
+    .shape1{
+        width: 400px;
+        height: 400px;
+        top: -11rem;
+        left:-6rem;
+    }
+    .shape2{
+        width: 400px;
+        height: 400px;
+        right:-6rem;
+    }
+    .form{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 0 2rem;
+    }
+    .formContent{
+        width: 320px;
+    }
+    .formImage{
+        display: block;
+        width: 50rem;
+        /* justify-self: center; */
+    }
+
+}
+
+
+
+
+
